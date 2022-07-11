@@ -4,3 +4,4 @@
 3 - Git
 4 - HTML
 5 - CSS
+6 - Python
