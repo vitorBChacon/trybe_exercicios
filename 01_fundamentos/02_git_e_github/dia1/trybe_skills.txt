@@ -1,6 +1,7 @@
-O que eu vou aprender na Trybe:
-
-- Unix
-- Bash
-- Git
+- O que eu vou aprender na trybe:
+1 - Unix
+2 - Bash
+3 - Git
+4 - HTML
+5 - CSS
 6 - Python
