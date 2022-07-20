@@ -1,0 +1,3 @@
+h1 - cria o heading principal
+h2/h6 - cria um heading secundário
+p - cria um paragrafo
