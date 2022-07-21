@@ -33,10 +33,34 @@ let numbers = [5, 9, 3, 19, 70, 8, 100, 2, 35, 27];
 // console.log(biggernumber)
 
 // requisito VI
-let oddNumbers = []
-for (x = 0; x < numbers.length; x++){
-  if (numbers[x] % 2 != 0){
-    oddNumbers.push(numbers[x])
-  };
+// let oddNumbers = []
+// for (x = 0; x < numbers.length; x++){
+//   if (numbers[x] % 2 != 0){
+//     oddNumbers.push(numbers[x])
+//   };
+// };
+// console.log(oddNumbers)
+
+// requisito VII
+// let smallerNumber = 2000;
+// for (x = 0; x < numbers.length; x++){
+//   if (numbers[x] < smallerNumber){
+//     smallerNumber = numbers[x]
+//   };
+// };
+// console.log(smallerNumber)
+
+// requisito VIII
+let numbers2 = []
+for (let x = 1; x < 26; x++) {
+  numbers2.push(x)
+}
+// console.log(numbers2)
+
+//requisito IX
+let resultadosDaDivisao = []
+for (x = 0; x < numbers2.length; x++){
+  let divisao = numbers2[x] / 2
+  resultadosDaDivisao.push(divisao)
 };
-console.log(oddNumbers)
+console.log(resultadosDaDivisao)
