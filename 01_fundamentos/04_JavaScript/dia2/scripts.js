@@ -11,3 +11,11 @@ menu.push('contato')
 for (let menuIndex = 0; menuIndex <= menu.length; menuIndex += 1) {
   console.log(menu[menuIndex])
 }
+
+// for/of
+
+let names = ['João', 'Maria', 'Antônio', 'Margarida'];
+
+for (let lista of names) {
+  console.log(lista);
+}
