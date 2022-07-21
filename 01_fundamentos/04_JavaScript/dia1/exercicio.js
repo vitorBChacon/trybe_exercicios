@@ -122,37 +122,114 @@ if (custoDeProducao > 0 && valorDeVenda > 0) {
 };
 
 // requisito XI
-let salario = 3000;
-let salarioDeduzido;
-let calculoIR;
-let valorFinal;
-
-if (salario <= 1556.94) {
-  salarioDeduzido = salario * 0.92
-}else if(salario > 1556.94 && salario < 2594.92){
-  salarioDeduzido = salario * 0.91
-}else if(salario > 2594.92 && salario < 5189.82){
-  salarioDeduzido = salario * 0.89
-}else{
-  salarioDeduzido = salario - 570.88
+function impostos(salario) {
+  let salarioDeduzido;
+  let calculoIR;
+  let valorFinal;
+  if (salario <= 1556.94) {
+    salarioDeduzido = salario * 0.92
+    if (salarioDeduzido > 1903.98 && salario <= 2826.65) {
+      calculoIR = salarioDeduzido * 0.075 - (142.80)
+      valorFinal = salarioDeduzido - calculoIR
+      console.log(valorFinal)
+    }else if (salarioDeduzido > 2826.65 && salario <= 3751.05) {
+      calculoIR = salarioDeduzido * 0.15 - (354.80)
+      valorFinal = salarioDeduzido - calculoIR
+      console.log(valorFinal)
+    }else if (salarioDeduzido > 3751.05 && salario <= 4664.68) {
+      calculoIR = salarioDeduzido * 0.225 - (636.13)
+      valorFinal = salarioDeduzido - calculoIR
+      console.log(valorFinal)
+    }else if (salarioDeduzido > 4664.68) {
+      calculoIR = salarioDeduzido * 0.275 - (869.36)
+      valorFinal = salarioDeduzido - calculoIR
+      console.log(valorFinal)
+    }else{
+      console.log('Valor não registrado')
+    };
+  }else if(salario > 1556.94 && salario < 2594.92){
+    salarioDeduzido = salario * 0.91
+    if (salarioDeduzido > 1903.98 && salario <= 2826.65) {
+      calculoIR = salarioDeduzido * 0.075 - (142.80)
+      valorFinal = salarioDeduzido - calculoIR
+      console.log(valorFinal)
+    }else if (salarioDeduzido > 2826.65 && salario <= 3751.05) {
+      calculoIR = salarioDeduzido * 0.15 - (354.80)
+      valorFinal = salarioDeduzido - calculoIR
+      console.log(valorFinal)
+    }else if (salarioDeduzido > 3751.05 && salario <= 4664.68) {
+      calculoIR = salarioDeduzido * 0.225 - (636.13)
+      valorFinal = salarioDeduzido - calculoIR
+      console.log(valorFinal)
+    }else if (salarioDeduzido > 4664.68) {
+      calculoIR = salarioDeduzido * 0.275 - (869.36)
+      valorFinal = salarioDeduzido - calculoIR
+      console.log(valorFinal)
+    }else{
+      console.log('Valor não registrado')
+    };
+  }else if(salario > 2594.92 && salario < 5189.82){
+    salarioDeduzido = salario * 0.89
+    if (salarioDeduzido > 1903.98 && salario <= 2826.65) {
+      calculoIR = salarioDeduzido * 0.075 - (142.80)
+      valorFinal = salarioDeduzido - calculoIR
+      console.log(valorFinal)
+    }else if (salarioDeduzido > 2826.65 && salario <= 3751.05) {
+      calculoIR = salarioDeduzido * 0.15 - (354.80)
+      valorFinal = salarioDeduzido - calculoIR
+      console.log(valorFinal)
+    }else if (salarioDeduzido > 3751.05 && salario <= 4664.68) {
+      calculoIR = salarioDeduzido * 0.225 - (636.13)
+      valorFinal = salarioDeduzido - calculoIR
+      console.log(valorFinal)
+    }else if (salarioDeduzido > 4664.68) {
+      calculoIR = salarioDeduzido * 0.275 - (869.36)
+      valorFinal = salarioDeduzido - calculoIR
+      console.log(valorFinal)
+    }else{
+      console.log('Valor não registrado')
+    };
+  }else{
+    salarioDeduzido = salario - 570.88
+    if (salarioDeduzido > 1903.98 && salario <= 2826.65) {
+      calculoIR = salarioDeduzido * 0.075 - (142.80)
+      valorFinal = salarioDeduzido - calculoIR
+      console.log(valorFinal)
+    }else if (salarioDeduzido > 2826.65 && salario <= 3751.05) {
+      calculoIR = salarioDeduzido * 0.15 - (354.80)
+      valorFinal = salarioDeduzido - calculoIR
+      console.log(valorFinal)
+    }else if (salarioDeduzido > 3751.05 && salario <= 4664.68) {
+      calculoIR = salarioDeduzido * 0.225 - (636.13)
+      valorFinal = salarioDeduzido - calculoIR
+      console.log(valorFinal)
+    }else if (salarioDeduzido > 4664.68) {
+      calculoIR = salarioDeduzido * 0.275 - (869.36)
+      valorFinal = salarioDeduzido - calculoIR
+      console.log(valorFinal)
+    }else{
+      console.log('Valor não registrado')
+    };
+  }
+  // if (salarioDeduzido > 1903.98 && salario <= 2826.65) {
+  //   calculoIR = salarioDeduzido * 0.075 - (142.80)
+  //   valorFinal = salarioDeduzido - calculoIR
+  //   console.log(valorFinal)
+  // }else if (salarioDeduzido > 2826.65 && salario <= 3751.05) {
+  //   calculoIR = salarioDeduzido * 0.15 - (354.80)
+  //   valorFinal = salarioDeduzido - calculoIR
+  //   console.log(valorFinal)
+  // }else if (salarioDeduzido > 3751.05 && salario <= 4664.68) {
+  //   calculoIR = salarioDeduzido * 0.225 - (636.13)
+  //   valorFinal = salarioDeduzido - calculoIR
+  //   console.log(valorFinal)
+  // }else if (salarioDeduzido > 4664.68) {
+  //   calculoIR = salarioDeduzido * 0.275 - (869.36)
+  //   valorFinal = salarioDeduzido - calculoIR
+  //   console.log(valorFinal)
+  // }else{
+  //   console.log('Valor não registrado')
+  // };
 }
 
-if (salarioDeduzido > 1903.98 && salario <= 2826.65) {
-  calculoIR = salarioDeduzido * 0.075 - (142.80)
-  valorFinal = salarioDeduzido - calculoIR
-  console.log(valorFinal)
-}else if (salarioDeduzido > 2826.65 && salario <= 3751.05) {
-  calculoIR = salarioDeduzido * 0.15 - (354.80)
-  valorFinal = salarioDeduzido - calculoIR
-  console.log(valorFinal)
-}else if (salarioDeduzido > 3751.05 && salario <= 4664.68) {
-  calculoIR = salarioDeduzido * 0.225 - (636.13)
-  valorFinal = salarioDeduzido - calculoIR
-  console.log(valorFinal)
-}else if (salarioDeduzido > 4664.68) {
-  calculoIR = salarioDeduzido * 0.275 - (869.36)
-  valorFinal = salarioDeduzido - calculoIR
-  console.log(valorFinal)
-}else{
-  console.log('Valor não registrado')
-};
+impostos(3000)
