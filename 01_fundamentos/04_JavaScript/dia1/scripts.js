@@ -32,17 +32,17 @@ let tv = 'canal terra plana'
 switch (tv) {
     case 1:
         console.log('A tv está no canal 1')
-        break
-
+            break;
     case 2:
         console.log('A tv está no canal 2')
-        break
+            break;
     case 3:
         console.log('A tv está no canal 3')
-        break
+            break;
     case 4:
         console.log('A tv está no canal 4')
-        break
+            break;
     default:
         console.log('A tv não está em nenhum dos canais reconhecidos')
-}
+            break;
+    }
