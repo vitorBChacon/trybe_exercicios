@@ -32,19 +32,27 @@ console.log('the biggest word is', biggestWord)
 console.log('the smallest word is', smallestWord)
 
 // requisito 4
-let biggestPrimeNumber = 0;
-let primeNumberCounter = 0;
-let primeNumberArray = []
+let primeNumbers = [];
+let biggerPrime = 0;
+let primeCounter;
 
-for (number = 2; number <= 50; number++) {
-  for (let primeTester = 1; primeTester <= number; primeTester++) {
-    if (number % primeTester === 0) {
-      primeNumberCounter = primeNumberCounter + 1
-      if (primeNumberCounter > 2) {
-        primeNumberArray.push(number)
-      }
+for (arrayCreator = 2; arrayCreator <= 50; arrayCreator++) {
+  primeCounter = 0;
+  for (tester = 1; tester <= arrayCreator; tester++) {
+    if (arrayCreator % tester === 0) {
+      primeCounter++;
     };
   };
+  if (primeCounter === 2) {
+    primeNumbers.push(arrayCreator)
+  };
 };
-console.log(primeNumberArray)
+
+for (gettingBiggerPrime = 0; gettingBiggerPrime < primeNumbers.length; gettingBiggerPrime++){
+  if (primeNumbers[gettingBiggerPrime] > biggerPrime) {
+    biggerPrime = primeNumbers[gettingBiggerPrime]
+  };
+};
+
+console.log(biggerPrime);
 // gabarito trybe
