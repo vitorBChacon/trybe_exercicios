@@ -37,7 +37,7 @@
     <main class="main-content">
       <section class="center-content">
         <p>Texto padrão do nosso site</p>
-        <p>-----</p>
+        <p id = "texto">-----</p>
         <p>Trybe</p>
       </section>
     </main>
@@ -54,6 +54,42 @@
         5. Crie e execute uma função que modifique todo o texto da tag <p> para maiúsculo.
         6. Crie e execute uma função que exiba o conteúdo de todas as tags <p> no console.
         */
+      function mudandoTexto() {
+        document.getElementById('texto').innerText = 'Lorem Ipsum';
+      }
+      mudandoTexto();
+      
+      function mudandoCor1() {
+        const mainContent = document.getElementsByClassName('main-content')[0];
+        mainContent.style.backgroundColor = 'green';
+      }
+      mudandoCor1();
+
+      function mudandoCor2() {
+        const centerContent = document.querySelectorAll('.main-content > .center-content')[0];
+        centerContent.style.backgroundColor = 'white';
+      }
+      mudandoCor2();
+
+      function corrigindoTitulo() {
+        document.querySelector('.title').innerText = 'Exercício 5.1 - JavaScript';
+        
+      }
+      corrigindoTitulo();
+
+      function letrasMaiusculas() {
+        for (x = 0; x < document.getElementsByTagName('p').length; x++) {
+          document.getElementsByTagName('p')[x].innerText = document.getElementsByTagName('p')[x].innerText.toUpperCase();
+        }
+      }
+      letrasMaiusculas()
+
+      function ExibirNoConsole() {
+        for (x = 0; x < document.getElementsByTagName('p').length; x++) {
+          console.log(document.getElementsByTagName('p')[x].innerHTML);
+        }
+      }
+      ExibirNoConsole()
     </script>
   </body>
 </html>
