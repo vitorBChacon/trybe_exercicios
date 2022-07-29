@@ -20,9 +20,36 @@
     </section>
   </main>
   <script> 
-    console.log(document.getElementById('elementoOndeVoceEsta').parentNode);
-    document.getElementById('elementoOndeVoceEsta').parentNode.style.color = 'red';
-    
+    let posicao = document.querySelector('#elementoOndeVoceEsta');
+    let pai = posicao.parentNode;
+    pai.style.color = 'red';
+    console.log(pai.firstElementChild);
+    console.log(posicao.firstElementChild);
+    console.log(posicao.previousElementSibling);
+    console.log(posicao.parentNode.innerText);
+    console.log(posicao.nextElementSibling);
+    console.log(pai.lastElementChild);
+
+    // Parte II
+    let criacaoDeElemento = document.createElement('section');
+    let criacaoDeElemento2 = document.createElement('section');
+    criacaoDeElemento.className = 'novoIrmao';
+    pai.appendChild(criacaoDeElemento);
+    console.log(document.querySelector('.novoIrmao'));
+    criacaoDeElemento2.className = 'novoFilho';
+    posicao.appendChild(criacaoDeElemento2);
+    console.log(document.querySelector('.novoFilho'));
+    console.log(document.querySelector('.novoFilho').parentElement.nextElementSibling);
+    let listaDoVovo = document.querySelectorAll('#paiDoPai')
+    for (x = 0; x < listaDoVovo; x++) {
+      let elementoASerRemovido = listaDoVovo[x];
+      if (elementoASerRemovido.includes('pai')){
+        console.log('cool')
+      } else {
+        listaDoVovo.removeChild()
+      }
+    }
+    console.log(listaDoVovo)
   </script>
 </body>
 </html>
